@@ -1,2 +1,67 @@
-I'm currently compiling a list of my BabylonJS projects into a neater format.
-<br>Come back in a week maybe? :D
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BabylonJS Experiments</title>
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		<link href="web_assets/w3.css" rel="stylesheet" />
+
+		<style>
+			body {
+				font-family: "Segoe UI", sans-serif;
+				box-sizing: border-box;
+				cursor: default;
+				user-select: none;
+			}
+
+			.inline-block {
+				display: inline-block;
+			}
+
+			.experiment-card {	
+				text-decoration: none;
+			}
+
+			.experiment-card:hover {
+				cursor: pointer;
+				transition: 0.25s;
+				transform: scale(1.01);
+				background-color: black; color: white;
+			}
+
+			.experiment-card:hover > img {
+				filter: brightness(70%);
+				transition: 0.25s;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="padding card red margin">
+			<h2>BabylonJS Experiments</h2>
+			<div class="small">by TheoLeeCJ</div>
+		</div>
+		<div class="padding card margin">
+			A small collection of some BabylonJS Experiments of mine.
+			<br>Website is made using the w3.css CSS framework.
+			<br>You can find this site as a GitHub Repository at this link: <a target="_blank" href="https://github.com/TheoLeeCJ/babylonjs-experiment-1">https://github.com/TheoLeeCJ/babylonjs-experiment-1</a>.
+		</div>
+
+		<div class="margin-top">
+			<a href="truck_terrain/index.html" class="card third hide-small margin inline-block experiment-card">
+				<img src="web_assets/truck_terrain.png" style="width: 100%; max-width: 900px;" />
+				<div class="padding">
+					<b>Truck Driving Simulator with Infinite Terrain</b>
+					<br>uses the AmmoJS Physics Engine and is rather buggy
+				</div>
+			</a>
+			
+			<a href="truck_terrain/index.html" class="card hide-medium hide-large margin inline-block experiment-card">
+				<img src="web_assets/truck_terrain.png" style="width: 100%; max-width: 900px;" />
+				<div class="padding">
+					<b>Truck Driving Simulator with Infinite Terrain</b>
+					<br>uses the AmmoJS Physics Engine and is rather buggy
+				</div>
+			</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Infinite Terrain Truck Driving Sim</title>
+
+  <!-- Babylon.js -->
+  <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+  <script src="https://preview.babylonjs.com/ammo.js"></script>
+  <script src="https://preview.babylonjs.com/gltf_validator.js"></script>
+  <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+  <script src="https://preview.babylonjs.com/babylon.js"></script>
+  <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+  <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+
+  <style>
+    html,
+    body {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #renderCanvas {
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+    }
+
+    #fpsLabel {
+      right: 20px;
+      top: 20px;
+      font-size: 1.5rem;
+    }
+
+    #box {
+      font-size: .9rem;
+      bottom: 20px; left: 20px;
+    }
+
+    .floating {
+      position: absolute;
+      border-radius: 5px;
+      backdrop-filter: blur(10px);
+      cursor: default;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 7px;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="renderCanvas"></canvas>
+
+  <!-- Overlays -->
+  <div id="fpsLabel" class="floating">0 FPS</div>
+  <div id="box" class="floating">0 km/h</div>
+
+  <script>
+    let terrainMaterials = [];
+
+    function file_get_contents(url, callback) {
+      fetch(url).then(response => response.text()).then(data => { callback(data); });
+    }
+  </script>
+  <script src="heightmaps.js"></script>
+  <!-- <script src="index.js"></script> -->
+  <script src="index_v4.js"></script>
+  <script src="terrain.js"></script>
+  <!-- <script src="terrain_gen_truck.js"></script> -->
+  <script src="terrain_gen_v4.js"></script>
+</body>
+
+</html>
